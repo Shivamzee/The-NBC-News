@@ -6,11 +6,17 @@ type newsProp ={
 
 const Rightnav = (props:newsProp) => {
   return (
-    <div className='w-60 ml-2'>
+    <div className='w-60 ml-5'>
      {props.gnews.map((data:any)=>{
         return <>
-             <h1 className="font-bold mt-4">{data.title}</h1>
-             <hr className="mt-3"/>
+         <a href={data.url}>
+          <ul className="list-disc marker:text-blue-600 mt-5">
+            <li className="font-bold">{data.title}</li>
+          </ul>
+         </a>
+
+             
+             <hr className="mt-5"/>
         </>
      })}
     </div>
